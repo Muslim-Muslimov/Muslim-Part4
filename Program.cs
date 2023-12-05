@@ -1,3 +1,2 @@
-﻿using Muslim_Part4;
-
+using Muslim_Part4;
 CakesImproved.Start();
