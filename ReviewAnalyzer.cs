@@ -1,7 +1,4 @@
 ﻿
-
-
-
     internal class ReviewAnalyzer
 
     {
@@ -18,7 +15,7 @@
         
         foreach (string ключевоеСлово in положительные)
         {
-            if (отзыв.ToLower().StartsWith(ключевоеСлово)) // сначала использовал метод Contains, но потом Дауд показал этот метод.
+            if (отзыв.ToLower().Contains(ключевоеСлово)) // сначала использовал метод Contains, но потом Дауд показал этот метод.
             {
                 вПоложительных = true;
                 break; 
@@ -27,24 +24,23 @@
         if (вПоложительных == true)
         {
             Console.WriteLine("Хороший отзыв");
+            return;
         }
         foreach (string ключевоеСлово in отрицательные)
         {
-            if (отзыв.ToLower().StartsWith(ключевоеСлово))
+            if (отзыв.ToLower().Contains(ключевоеСлово))
             {
                 вОтрицательных = true;
                 break;
+                
             }
         }
         if (вОтрицательных == true)
         {
             Console.WriteLine("Плохой отзыв");
+            return;
         }
-        if (вПоложительных == false && вОтрицательных == false)
-        {
             Console.WriteLine("Нейтральный отзыв");
-        }
-        
         }
     }
 
