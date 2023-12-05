@@ -1,3 +1,3 @@
-﻿using Muslim_Part4;
+using Muslim_Part4;
 
-WeatherJournal.Start();
+ReviewAnalyzer.Start();
